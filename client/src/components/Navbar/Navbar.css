@@ -1,0 +1,48 @@
+.Navbar {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(76, 89, 202);
+    box-shadow: 2px 2px 5px bisque;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 3;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    flex: 3;
+}
+
+.right img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex: 8;
+}
+
+.Navbar a{
+    font-size: 20px;
+    margin: 15px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.Navbar a:hover{
+    cursor: pointer;
+}

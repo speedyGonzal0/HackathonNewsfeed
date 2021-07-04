@@ -1,0 +1,49 @@
+.Register {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RegisterForm input {
+   border-radius: 15px;
+   margin: 15px;
+   font-size: 20px;
+   color: #333;
+   background: #eee;
+   border: none;
+   padding: 15px 25px;
+   margin: 8px 0;
+   outline: none;
+}
+
+.RegisterForm button {
+    width: 75%;
+    margin: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(76, 89, 202);
+    background: rgb(76, 89, 202);
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 13px 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.RegisterForm button:active{
+    transform: scale(0.95);
+}
+
+.RegisterForm button:hover{
+    cursor: pointer;
+}
