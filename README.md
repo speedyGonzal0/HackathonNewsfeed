@@ -15,3 +15,5 @@ However, functionalities that work are:
 3. Write posts which are then stored and viewable only in the database.
 
 Those are all we managed to do. But will continue working on the project even after the judgment phase.
+
+<h3>P.S: Extremely sorry for not being able to submit a video presentation.</h3>
