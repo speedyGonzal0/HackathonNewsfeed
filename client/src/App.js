@@ -7,14 +7,19 @@ import Navbar from './components/Navbar/Navbar';
 import Settings from './pages/settings/Settings';
 import Single from './pages/single/Single';   
 import Write from "./pages/write/Write";
-import { useState } from 'react';          
+import { useState, useEffect } from 'react';          
 
 function App() {
-  const [currentUser, setCurrentUser] = useState('false');
+  //const [currentUser, setCurrentUser] = useState(false);
+  const currentUser = false;
+
+  // useEffect(()=>{
+  //   setCurrentUser(currentUser);
+  // })
 
   return (
     <Router>
-    <Navbar currentUser={currentUser} curState={setCurrentUser}/>
+    <Navbar/>
     <Switch>
       <Route exact path="/">
         <Home />
@@ -25,13 +30,13 @@ function App() {
       <Route path="/register">
         {currentUser ? <Home /> : <Register />}
       </Route>
-      <Route path="/login">{currentUser ? <Home /> : <Login currentUser={currentUser} curState={setCurrentUser}/>}</Route>
+      <Route path="/login">{currentUser ? <Home /> : <Login />}</Route>
       <Route path="/post/:id">
         <Single />
       </Route>
-      <Route path="/write">{currentUser ? <Write /> : <Login currentUser={currentUser} curState={setCurrentUser}/>}</Route>
+      <Route path="/write">{currentUser ? <Write /> : <Login/>}</Route>
       <Route path="/settings">
-        {currentUser ? <Settings /> : <Login currentUser={currentUser} curState={setCurrentUser}/>}
+        {currentUser ? <Settings /> : <Login />}
       </Route>
     </Switch>
   </Router>

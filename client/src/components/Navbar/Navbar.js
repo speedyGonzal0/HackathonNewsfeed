@@ -2,17 +2,19 @@ import React from 'react'
 import "./Navbar.css"
 import TextField from '@material-ui/core/TextField';
 
-function Navbar({currentUser},{curState}) {
+function Navbar() {
 
-    const handleLogout = ()=>{
-        curState(false);
-    }
+    // const handleLogout = ()=>{
+    //     setUser(false);
+    // }
+
+    const currentUser = false;
 
 
     return (
         <div className="Navbar">
             <div className="left">
-            <TextField id="outlined-basic" label="search" variant="outlined" />
+            
             </div>
 
             <div className="center">
@@ -20,7 +22,7 @@ function Navbar({currentUser},{curState}) {
             <a href="/write">Write</a>
             <a href="/settings">Settings</a>
             
-             <a href="/" onClick={handleLogout}>
+            <a href="/">
                 {currentUser && "Logout"}
             </a> 
             </div>

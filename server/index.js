@@ -45,12 +45,17 @@ var db = mysql.createPool({
     const userName = req.body.userName;
     const pass = req.body.pass;
 
-    var sql = "SELECT * FROM users WHERE user_name=?";
-    db.query(sql,[userName], (err, results)=>{
-        if(err) throw err;
+    var sql = "SELECT * FROM users WHERE user_name=? AND password=?";
+    db.query(sql,[userName,pass], (err, results)=>{
+        if(err){
+            res.send({err: err})
+        }
 
-        if(results.length){
-            
+        if(results.length > 0){
+            res.send(results);
+        }
+        else{
+            res.send({message: "Wrong username/password!"})
         }
     } )
   })
